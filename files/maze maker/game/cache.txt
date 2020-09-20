@@ -1,0 +1,292 @@
+elif valeur==8:
+    print("€", end=" ")
+elif valeur==9:
+    print("|", end=" ")
+elif valeur== 10:
+	print("-", end=" ")
+elif valeur==11:
+	print("A", end=" ")
+elif valeur==12:
+	print("B", end=" ")
+elif valeur==13:
+	print("C", end=" ")
+elif valeur==14:
+    print("D", end=" ")
+elif valeur==15:
+    print("E", end=" ")
+elif valeur==16:
+    print("F", end=" ")
+elif valeur==17:
+    print("G", end=" ")
+elif valeur==18:
+    print("H", end=" ")
+elif valeur==19:
+    print("I", end=" ")
+elif valeur==20:
+    print("J", end=" ")
+elif valeur==21:
+    print("K", end=" ")
+elif valeur==22:
+    print("L", end=" ")
+elif valeur==23:
+    print("O", end=" ")
+elif valeur==24:
+    print("P", end=" ")
+elif valeur==25:
+    print("Q", end=" ")
+elif valeur==26:
+    print("R", end=" ")
+elif valeur==27:
+    print("S", end=" ")
+elif valeur==28:
+    print("T", end=" ")
+elif valeur==29:
+    print("U", end=" ")
+elif valeur==30:
+    print("V", end=" ")
+elif valeur==31:
+    print("W", end=" ")
+elif valeur==32:
+    print("X", end=" ")
+elif valeur==33:
+    print("Y", end=" ")
+elif valeur==34:
+    print("Z", end=" ")
+elif valeur==35:
+    print("a", end=" ")
+elif valeur==36:
+    print("b", end=" ")
+elif valeur==37:
+    print("c", end=" ")
+elif valeur==38:
+    print("d", end=" ")
+elif valeur==39:
+    print("e", end=" ")
+elif valeur==40:
+    print("f", end=" ")
+elif valeur==41:
+    print("g", end=" ")
+elif valeur==42:
+    print("h", end=" ")
+elif valeur==43:
+    print("i", end=" ")
+elif valeur==44:
+    print("j", end=" ")
+elif valeur==45:
+    print("k", end=" ")
+elif valeur==46:
+    print("l", end=" ")
+elif valeur==47:
+    print("m", end=" ")
+elif valeur==48:
+    print("n", end=" ")
+elif valeur==49:
+    print("o", end=" ")
+elif valeur==50:
+    print("p", end=" ")
+elif valeur==51:
+    print("q", end=" ")
+elif valeur==52:
+    print("r", end=" ")
+elif valeur==53:
+    print("s", end=" ")
+elif valeur==54:
+    print("t", end=" ")
+elif valeur==55:
+    print("u", end=" ")
+elif valeur==56:
+    print("v", end=" ")
+elif valeur==57:
+    print("w", end=" ")
+elif valeur==58:
+    print("x", end=" ")
+elif valeur==59:
+    print("y", end=" ")
+elif valeur==60:
+    print("z", end=" ")
+elif valeur==61:
+    print("~", end=" ")
+elif valeur==62:
+    print("(", end=" ")
+elif valeur==63:
+    print(")", end=" ")
+elif valeur==64:
+    print("_", end=" ")
+elif valeur==65:
+    print("&", end=" ")
+elif valeur==66:
+    print("²", end=" ")
+elif valeur==67:
+    print("*", end=" ")
+elif valeur==68:
+    print("µ", end=" ")
+elif valeur==69:
+    print("ù", end=" ")
+elif valeur==70:
+    print("%", end=" ")
+elif valeur==71:
+    print("!", end=" ")
+elif valeur==72:
+    print("§", end=" ")
+elif valeur==73:
+    print(":", end=" ")
+elif valeur==74:
+    print("?", end=" ")
+elif valeur==75:
+    print("<", end=" ")
+elif valeur==76:
+    print(">", end=" ")
+elif valeur==77:
+    print("^", end=" ")
+elif valeur==78:
+    print("¨", end=" ")
+elif valeur==79:
+    print("¤", end=" ")
+elif valeur==80:
+    print("°", end=" ")
+elif valeur==81:
+    print("+", end=" ")
+elif valeur==82:
+    print("≤", end=" ")
+elif valeur==83:
+    print("≥", end=" ")
+elif valeur==84:
+    print("∓", end=" ")
+elif valeur==85:
+    print("∞", end=" ")
+elif valeur==86:
+    print("±", end=" ")
+elif valeur==87:
+    print("≠", end=" ")
+elif valeur==88:
+    print("∝", end=" ")
+elif valeur==89:
+    print("∀", end=" ")
+elif valeur==90:
+    print("≡", end=" ")
+elif valeur==91:
+    print("≪", end=" ")
+elif valeur==92:
+    print("≫", end=" ")
+elif valeur==93:
+    print("≅", end=" ")
+elif valeur==94:
+    print("≈", end=" ")
+elif valeur==95:
+    print("℉", end=" ")
+elif valeur==96:
+    print("℃", end=" ")
+elif valeur==97:
+    print("∇", end=" ")
+elif valeur==98:
+    print("√", end=" ")
+elif valeur==99:
+    print("←", end=" ")
+elif valeur==100:
+    print("↑", end=" ")
+elif valeur==101:
+    print("→", end=" ")
+elif valeur==102:
+    print("↓", end=" ")
+elif valeur==103:
+    print("⋮", end=" ")
+elif valeur==104:
+    print("⋯", end=" ")
+elif valeur==105:
+    print("⋰", end=" ")
+elif valeur==106:
+    print("⋱", end=" ")
+elif valeur==107:
+    print("∎", end=" ")
+elif valeur==108:
+    print("∅", end=" ")
+elif valeur==109:
+    print("∑", end=" ")
+elif valeur==110:
+    print("⋈", end=" ")
+elif valeur==111:
+    print("⨀", end=" ")
+elif valeur==112:
+    print("⨂", end=" ")
+elif valeur==113:
+    print("⨁", end=" ")
+elif valeur==114:
+    print("⨄", end=" ")
+elif valeur==115:
+    print("⨃", end=" ")
+elif valeur==116:
+    print("∔", end=" ")
+elif valeur==117:
+    print("∸", end=" ")
+elif valeur==118:
+    print("⋒", end=" ")
+elif valeur==119:
+    print("⋓", end=" ")
+elif valeur==120:
+    print("⊟", end=" ")
+elif valeur==121:
+    print("⊠", end=" ")
+elif valeur==122:
+    print("⊡", end=" ")
+elif valeur==123:
+    print("⊞", end=" ")
+elif valeur==124:
+    print("⋉", end=" ")
+elif valeur==125:
+    print("⋊", end=" ")
+elif valeur==126:
+    print("⋇", end=" ")
+elif valeur==127:
+    print("⊝", end=" ")
+elif valeur==128:
+    print("⊕", end=" ")
+elif valeur==129:
+    print("⊖", end=" ")
+elif valeur==130:
+    print("⊗", end=" ")
+elif valeur==131:
+    print("⊘", end=" ")
+elif valeur==132:
+    print("⊙", end=" ")
+elif valeur==133:
+    print("⊛", end=" ")
+elif valeur==134:
+    print("⊚", end=" ")
+elif valeur==135:
+    print("†", end=" ")
+elif valeur==136:
+    print("‡", end=" ")
+elif valeur==137:
+    print("⨂", end=" ")
+elif valeur==138:
+    print("△", end=" ")
+elif valeur==139:
+    print("⋘", end=" ")
+elif valeur==140:
+    print("⋙", end=" ")
+elif valeur==141:
+    print("≦", end=" ")
+elif valeur==142:
+    print("≧", end=" ")
+elif valeur==143:
+    print("⋖", end=" ")
+elif valeur==144:
+    print("⋗", end=" ")
+elif valeur==145:
+    print("≑", end=" ")
+elif valeur==146:
+    print("≒", end=" ")
+elif valeur==147:
+    print("≓", end=" ")
+elif valeur==148:
+    print("⊲", end=" ")
+elif valeur==149:
+    print("⊳", end=" ")
+elif valeur==150:
+    print("⊴", end=" ")
+elif valeur==151:
+    print("⊵", end=" ")
+elif valeur==152:
+    print("⋐", end=" ")
+elif valeur==153:
+    print("⋑", end=" ")

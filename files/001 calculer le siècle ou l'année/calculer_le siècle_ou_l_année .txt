@@ -1,0 +1,302 @@
+﻿from time import sleep
+import pygame, os
+pygame.font.init()
+pygame.display.set_caption('Kaatman Bird')
+font, font2 = pygame.font.SysFont('Arial', 72), pygame.font.SysFont('Arial', 36)
+time=lii=times=0
+I=cont="O"
+w="Créé par Henry Letellier"
+w_e="""\n._______.\n|       |\n| °   ° |\n|   |   |\n|\\_____/|\n|_______|"""
+liimouvmouv=["  - [LE BAROQUE]", "  - [LE BAROQUE]","  - [le baroque]","  - LE BAROQUE","  - le baroque","  - [CLASSICISME]","  - [classicisme]","  - CLASSICISME","  - classicisme","  - [LUMIERRES]","  - [lumierres]","  - LUMIERRES","  - lumierre","  - lumièrre","  - [lumierre]","  - lumièrres","  - [lumierres]","  - [ROMANTISME]","  - [romantisme]","  - romantisme","  - ROMANTISME","  - [PARNASSE]","  - [parnasse]","  - PARNASSE","  - parnasse","  - [SYMBOLISME]","  - [symbolisme]","  - SYMBOLISME","  - symbolisme","  - [REALISME]","  - [realisme]","  - [réalisme]","  - REALISME","  - realisme","  - réalisme","  - [SURREALISME]","  - [surrealisme]","  - SURREALISME","  - surrealisme","  - surréalisme","  - [surréalisme]","  - [THEATRE_DE_L'ABSURDE]","  - [théâtre de l'absurde]","  - [theatre de l'absurde]","  - THEATRE_DE_L'ABSURDE","  - théatre de l'absurde","  - theatre de l'absurde","  - [EXISTENTIALISME]","  - [existentialisme]","  - [éxistentialisme]","  - EXISTENTIALISME","  - existentialisme","  - éxistentialisme","  - [XX_4]","  - [xx_4]","  - [NOUVEAU ROMAN]","  - [nouveau roman]","  - NOUVEAU ROMAN","  - nouveau roman","  - baroque"]
+liioption=["- 16","- 17_1","- 17_2","- 18","- 19_1","- 19_2","- 19_3","- 19_4","- 20_1","- 20_2","- 20_3","- 20_4","\n","\n","\n"]
+liioption_2=["- XVI","- XVII","Pour accéder à un mouvement spécifique dans le siècle:","  - XVII_1","  - XVII_2","- XVIII","- XIX","Pour accéder à un mouvement spécifique dans le siècle:","  - XIX_1","  - XIX_2","  - XIX_3","  - XIX_4","- XX","Pour accéder à un mouvement spécifique dans le siècle:","  - XX_1","  - XX_2","  - XX_3","  - XX_4","\n","\n","\n"]
+liioption_2_1=["- 16","- 17_1","- 17_2","- 18","- 19_1","- 19_2","- 19_3","- 19_4","- 20_1","- 20_2","- 20_3","- 20_4","\n","\n","\n"]
+liioptionalert=["*===========================================================================*","*Le plus petit siècle est le 16ème (XVI) et le plus grand est le 20ème (XX).*","*===========================================================================*","\n","\n","\n"]
+print ("Bienvenue dans le programme de calcul d'années, de dates mais aussi un dictionnaire de mouvement")
+sleep (2)
+while I=="o" or I=="O":
+    main=input("Que voulez-vous calculer?: ((s)iècle; (d)ate; (tum) trouver un mouvement littéraire par le siècle; (tls) trouver le siècle par le mouvement littéraire; /? pour aide; (q) Quitter)")
+
+    if main=="s" or main=="S":
+        while r=="O" or r=="o":
+            print ("S\n Si vous voulez un exemple tapez (ex) dans la première question et ne tapez rien dans la deuxième")
+            a=input("quelle est votre année? (veulliez n'entrer que les deux premier chiffres si c'est une date à quatre chiffres ou plus sinon mettez les deux ou trois chiffres que vous avez):")
+            b=input("veuillez entrer les deux (ou plus en fonction de l'année) dernier chiffres ici (laissez-le vide si vous avez tapé ex ou EX précédament):")
+            if a==a and b==b or a=="EX" or a=="ex":
+                if a<100 :
+                    print ("date={}{}\ndate={}{}-1{}\nL'année {}{} correspond au {}ème siècle \nDonc votre siècle est le {}ème.".format(a, b, a, b, b, a, b, a+1, a+1))
+                    print ("Pour bien comprendre comment passer de dates en siècles merci de le faire avec différentes valeures")
+                elif a>=100:
+                    print("veuillez n'entrer que les deux premier chiffres de votre date (exemple: 1234 --> a=12, b=34:")
+                elif a=="ex" or a=="EX":
+                        a=0
+                        ex=input("Bienvenue dans l'exemple.\n dans quelques secondes vont se dérouler le calcul de quelques dates.combien de dates voulez-vous en exemple? (de 1 à ∞(inf))")
+                        if ex<=1:
+                            c=10
+                            b=00
+                            while a<=ex:
+                                print ("date={}{}\ndate={}{}+1{}\nL'année {}{} correspond au {}ème siècle \nDonc votre siècle est le {}ème.".format(c, b, c, b, b, c, b, c+1, c+1))
+                                a+=1
+                                b+=1
+                                c+=1
+                            else:
+                                c=10
+                                b=00
+                                ex=1
+                                while a<ex:
+                                    print ("date={}{}\ndate={}{}-1{}\nL'année {}{} correspond au {}ème siècle \nDonc votre siècle est le {}ème.".format(c, b, c, b, b, c, b, c+1, c+1))
+                                    b+=1
+                                    c+=1
+                else:
+                    print ("Êtes-vous sûre d'avoir entré un nombre?")
+            else:
+                print ("Veuillez entrer un nombre comme expliqué ci-dessus\nDans le siècle 1500:\n- On va entrer pour la première question 15\n- Pour la seconde 00.")
+        r=input ("Voulez-vous calculer un nouveau siècle? [(o)ui/(n)on]: ")
+    elif main=="d" or main=="D":
+        print ("D")
+        while r=="O" or r=="o":
+            a=input("S\n Si vous voulez un exemple tapez (ex) dans la première question et ne tapez rien dans la deuxième\nQuel est votre siècle (veulliez l'entrer en chiffres arabes (1234)):")
+            if a==a or a=="EX":
+                if a==a :
+                    print ("Le siècle {}\n Siècle={}-1\nAnnée={}+00\nLe {}e siècle correspond à l'an {}00 \nDonc votre années est {}00.".format(a, a, a-1, a-1, a, a-1, a-1))
+                    print ("Pour bien comprendre comment passer de siècles en dates merci de le faire avec différentes valeures")
+                elif a=="ex" or a=="EX":
+                        a=0
+                        ex=input("Bienvenue dans l'exemple.\n dans quelques secondes vont se dérouler le calcul de quelques dates.combien de dates voulez-vous en exemple? (de 1 à ∞(inf))")
+                        if ex<=1:
+                            c=10
+                            b=00
+                            while a<=ex:
+                                print ("date={}{}\ndate={}{}-1{}\nL'année {}{} correspond au {}ème siècle \nDonc votre siècle est le {}ème.".format(c, b, c, b, b, c, b, c+1, c+1))
+                                a+=1
+                                b+=1
+                                c+=1
+                            else:
+                                c=10
+                                b=00
+                                ex=1
+                                while a<ex:
+                                    print ("date={}{}\ndate={}{}-1{}\nL'année {}{} correspond au {}ème siècle \nDonc votre siècle est le {}ème.".format(c, b, c, b, b, c, b, c+1, c+1))
+                                    b+=1
+                                    c+=1
+                else:
+                    print ("Êtes-vous sûre d'avoir entré un nombre?")
+            else:
+                print ("Veuillez entrer un nombre comme expliqué ci-dessus\nDans le siècle 1500:\n- On va entrer pour la première question 15\n- Pour la seconde 00.")
+        r=input ("Voulez-vous calculer un nouveau siècle? [(o)ui/(n)on]: ")
+    elif main=="tum" or main=="TUM":
+        print ("TUM")
+        cont="o"
+        while cont=="o" or cont=="O":
+            mouv=input ("Pour avoir accès à la liste de commande prévues tapez (options)\nQuel mouvement voulez-vous trouver? (veuillez enttrer la date ou le siècle(en chifres romain)): ")
+            print ("Mouvement sélectionné: {}".format(mouv))
+            if mouv=="all":
+                print("""
+                [16/XVI]     --> "HUMANISME\n\nCertaines découvertes révolutionnent la vision du monde et de l'homme de l'époque: découverte de l'imprimerie, découverte d'œuvress antiques inédites, exploration de nouveau continents, découverte en astronomie.\nSous influence des auteurs de l'Antiquité, les humains rêvent ainsi d'une humanité pacifiée, cultivée et libre.\nLe développement de l'esprit est au centre de la réflexion humaniste qui valorise l'éducation et l'accès direct à la connaissance"
+                [17_1/XVII_1]--> "Le BAROQUE\n\nLa sensibilité baroque est fondée sur l'instabilité, l'inquiétude et le doute, qui trouvent leur origine dans la succession de guerre de religion qui agitent le pays.\nLe baroque aime jouer avec l'illusion, les méthamorphoses, le travestissement, les mises en abyme. Le théâtre baroque mélange les genres.\nL sensibilité baroque perçoit le monde comme une scène de théâtre où tout n'est qu'illusion (theatrum mundi)"
+                [17_2/XVII_2]--> "CLASSICISME\n\nLes Classiques défendent un double idéal, fondé sur la raison: Un idéal esthétique qui repose sur des règles édictées par les Anciens (et notament pour le théâtre): clarté, vraisemblance, bienséance; Un idéal humain qui s'incarne dans «l'honnête homme», un être modeste et cultivé capable de maîtriser ses passions.\nLes classiques sont des moralistes : ils analysent la nature humaine dont ils critiquent les défauts, pour tenter de corriger les hommes.\nLe but des classiques : plaire et instruire (placere et docere)."
+                [18/XVIII]   --> "LUMIERRES\n\nLes Lumières est un mouvement européen dont l'objectif est de lutter contre l'obscurantisme,.\nLes lumières sont celles de la raison devant repousser l'ignorance et le fanatisme. Selon Kant, philosophe allemand, l'homme des Lumières est celui qui a le courage de réfléchir par lui-même afin de se libérer des préjugés.\n(Sapere aude)\nLes philosophes des Lumières réfléchissent sur le bonheur de l'homme : pour être heureux, l'homme doit être libre d'exercer son esprit critique.\nMais pour nourrir cet esprit critique, l'homme doit avoir accès à la connaissance.\nC'est pourquoi les penseurs des Lumières se lancent dans l'élaboration d'ouvrages collectifs comme (italic)L'Encyclopédie(italic).\nLes idéaux des Lumières dont la liberté, l'égalité et la fraternité."
+                [19_1/XIX_1] --> "ROMANTISME\n\nCe mouveent s'oppose au classicisme : il exalte l'imagination et fait du «moi» une valeur absolue.\nL'esprit se reconnaît à trravers la nostalgiedu passé (néé du dégout de la réalité contemporaine), la mal du siècle (né de l'écart entre la réalité et l'idéal que porte l'artiste romantique), le goût pour l'introspection (l'art doit exprimer la nature elle-même devient un reflet de ses états d'âmes) et la quête d'un idéal.\n\nLe poète romantique est aussi un artiste engagé qui se présente comme un guide pour le peuple.\nIl se fait juge des évènement de son temps et dénonce les injustices ou les abus de pouvoir.\n\nLe drame romantique:\nHugo définit ce nouveau type de théâtre comm refusant la distinction entre les genres comiques et tragiques, refusant les règles des trois unités et la vraisemblance.\nLe théâtre doit refléter la complexité de la vie"
+                [19_2/XIX_2] --> "PARNASSE\n\nCe mouvement s'inscrit contre le romantisme.\n\n\nIl refuse le lyrisme et les épanchements du «Moi» et cultive ainsi une poésie impersonnelle.\n\n\nIl refuse de soumettrre la poésie à une cause politique ou sociale: le seul but de l'art doit être le Beau.\n(C'est «l'art pour l'art» revendiqué par Gautier: ce qui est vraiment beau ne sert à rien.)\nIl ne s'intéresse donc pas à des sujets d'actualité mais à la myhtologie ou les civilisation disparues par exemple.\n\n\nLes Parnassiens accordent une importance capitale au travail sur la forme de leur texte: images, sonorités, choix des mots, goût du mot rare etc. Le poète parnassien est un sculpteur.\nIls influencent de nombreux poètes comme Baudelaire et Verlaine."
+                [19_3/XIX_3] --> "SYMOLISME\n\nBaudelaire est le précurseur du symbolisme.\nLe symbolisme veut rompre avec les certitudes du naturalisme : le monde n'est pas uniquement ce qui se présente sous nos yeux. Il existe un monde invisible et mystérieux.\nPour déchiffrer les mystères du monde qui l'entoure, le poète symboliste a recours à ses cinq sens. il établit des correspondances, appelées aussi «synesthésies».\nHéritier de Baudelair, Rimbaud affirme que le poète doit «se faire«voyant» »: il doit «découvrir l'inconnu» et rapporter aux autres hommes ses visions.\nMais pour partager ses visions, il lui faut inventer un language nouveau.\nCe language nouveau (très inspiré par le travail formel des Parnassiens) accorde une grande importance à la musique à la musique.\nEn effet, la musique permet de suggérer ce que les mots ne peuvent nommer.\nCe travail sur la langue fait du poète symboliste un «alchimiste du verbe» selon Rimbaud."
+                [19_4/XIX_4] --> "REALISME ET NATURALISME\n\nLe réalisme est un mouvement littéraire qui cherche à peindre la réalité telle qu'elle est, sans l'embellir.\nLes auteurs réalistes comme Balzac ont voulu être les historiens de leur époque, mais aussi des scientifiques. Ils souhaitent en effet montrer le fonctionnement de la société. A la manière des biologistes, ils font l'inventaire des «espèces sociales».\nLe personnage réaliste est un type qui incarne ainsi un groupe social ou untrait de caractère humain.\n\n\nLe naturalisme, que définit Zola, s'inscrit dans le sillage du réalisme.\nIl propose un nouveau type de roman, le «roman expérimental» dont le but est la connaissance de l'homme.\nZola se distingue de Balzac en affirmant vouloir étudier le «mécanisme intérieur» de l'être humain.\nIl veut prouver àtravers ses romans l'influence du milieu sur l'individu mais également le rôle de l'hérédité dans le comportement des êtres qui sont toujours déterminés."
+                [20_1/XX_1]  --> "SURREALISME\n\nCe mouvement n'aît après la première guerre mondiale.\nLe surréalisme est un mouvement artistique qui se situe dans le prolongement du symbolisme.\nParmi les précurseurs du surréalisme : Rimbaud, Jarry, Apolinaire.\nLa littérature surréaliste est liée à certains mouvements picturaux comme le cubisme.\nLe surréalisme défend l'idée que l'art peut changer la vie.\nBreton est le chef de file du surréalisme.\n\n\nLes surréalistes cherchent à libérer l'art du carcan de la raison et de la logique.\nPour cela, ils veule,t donner la parole à l'inconscient et accorder une place au hasard.\nIls utilisent  diverse techniques : écriture automatique, cadavres exquis, séance de sommeil hypnotique.\n\n\nLe surréalisme remet en cause les valeurs établies ce qui aboutit parfois à des engagements politiques : au carrefour de l'anarchisme et du marxisme, les surréalistes militent contre le militarisme, l'oppression coloniale, le nazisme, le totalistarisme soviétique."
+                [20_2/XX_2]  --> "THEATRE DE L'ABSURDE\n\nCe théâtre exprime l'angoisse existentielle  de l'homme après la seconde guerre mondiale.\nLe théâtre de l'absurde joue de Pirrationell farcesque pour montrer le tragique de la condition humaine : l'homme est seul dans un monde qui lui semble étranger: c'est «l'inquiétante étrangeté» (Freud) d'un monde jusq'à présent familier.\n\n\nLes personnages n'ont plus de consistance. Toutes leurs action semblent vaines : l vie n'a plus de sens, Le langage ne sert plus à sommuniquer.\n\n\nCe théâtre cultive la «distanciation» (Brecht) qui s'oppose à l'identification recherchée par un théâtre qui se veut réaliste : tout est fait pour que le spectateur sorte de sa position de pssivité et se mette à réfléchir sur le monde qui l'entoure."
+                [20_3/XX_3]  --> "EXIXTENTIALISME\n\nL'existentialisme français est un mouvement philosophique dont les deux représentants majeurs sont Artre et Camus (il existe toutefois plusieurs sujets de divergence entre eux).\nLa pensée existentialiste se retrouve dans une partie de la littérature de la seconde moitié du XXème siècle.\n\n\nLes existentialistes français rejettent «l'esprit de sérieux» ce que Sartre appelle la «mauvaise foi», c'est-à-dire le fait de se conformer à la fonciton arbitraire que nous impose la société.\nL'esprit de sérieus est la négation de la liberté de l'homme.\nCe rejet de l'esprit de sérieux est le thème de l'Etranger d'Albert Camus : Meursault refuse de se conformer à ce qu'on attend de lui, de jouer le jeu imposé par la société.\n\n\nLes existentialistes français mettent également l'accent sur l'absurdité de l'existence, le sentiment d'étrangeté que l'homme éprouve face à un monde qu'il ne comprend pas, dans lequel il ne trouve pas sa place (Camus parle d'un «divorse» entre l'homme et le monde).\n\n\nLes philosophes existentialistes définissent l'homme par son action : l'homme est ce qu'il fait, il est ainsi responsable de ce qui se passe dans la société."
+                [20_4/XX_4]  --> "NOUVEAU ROMAN\n\nCe mouvement rejette l'image rassurante du monde que véhicule le roman réaliste du XIXème siècle.\nLe monde n'est plus un univers cohérent.\nL'homme n'est plus un être que l'on peut comprendre.\nLe Nouveau Roman renvoie l'image d'un monde complexe et fragmenté.\n\n\nLes conséquences sur l'écriture romanesque:\n\nDéconstruction de la psychologie des personnages (les êtres deviennent anonymes et les objets prennent d'avantage de place).\nRefus de l'ordre chronologique des événements  (ce n'est plus l'histoire en elle-même qui importe mais l'écriture de l'histoire, avec ses oublis, ses répétitions, ses variations, etc.)\nLa pensée des personnages se manifest à traver des flux de conscience (jeux de mémoire, déstruction ou reconstruction du souvenir etc.)\n""")
+                cont=input("Voulez-vous trouver un nouveau mouvement? [(o)ui/(n)on]: ")
+            elif mouv=="16" or mouv=="XVI" or mouv=="xvi"or mouv=="[XVI]" or mouv=="[xvi]":
+                print ("[XVI]")
+                print ("HUMANISME\n\nCertaines découvertes révolutionnent la vision du monde et de l'homme de l'époque: découverte de l'imprimerie, découverte d'œuvress antiques inédites, exploration de nouveau continents, découverte en astronomie.\nSous influence des auteurs de l'Antiquité, les humains rêvent ainsi d'une humanité pacifiée, cultivée et libre.\nLe développement de l'esprit est au centre de la réflexion humaniste qui valorise l'éducation et l'accès direct à la connaissance")
+                cont=input("Voulez-vous trouver un nouveau mouvement? [(o)ui/(n)on]: ")
+            elif mouv=="17_1" or mouv=="XVII_1" or mouv=="xvii_1"or mouv=="[XVII_1]" or mouv=="[xvii_1]":
+                print ("[XVII_1]")
+                print ("Le BAROQUE\n\nLa sensibilité baroque est fondée sur l'instabilité, l'inquiétude et le doute, qui trouvent leur origine dans la succession de guerre de religion qui agitent le pays.\nLe baroque aime jouer avec l'illusion, les méthamorphoses, le travestissement, les mises en abyme. Le théâtre baroque mélange les genres.\nL sensibilité baroque perçoit le monde comme une scène de théâtre où tout n'est qu'illusion (theatrum mundi)")
+                cont=input("Voulez-vous trouver un nouveau mouvement? [(o)ui/(n)on]: ")
+            elif mouv=="17_2" or mouv=="XVII_2" or mouv=="xvii_2"or mouv=="[XVII_2]" or mouv=="[xvii_2]":
+                print ("[XVII_2]")
+                print ("CLASSICISME\n\nLes Classiques défendent un double idéal, fondé sur la raison: Un idéal esthétique qui repose sur des règles édictées par les Anciens (et notament pour le théâtre): clarté, vraisemblance, bienséance; Un idéal humain qui s'incarne dans «l'honnête homme», un être modeste et cultivé capable de maîtriser ses passions.\nLes classiques sont des moralistes : ils analysent la nature humaine dont ils critiquent les défauts, pour tenter de corriger les hommes.\nLe but des classiques : plaire et instruire (placere et docere).")
+                cont=input("Voulez-vous trouver un nouveau mouvement? [(o)ui/(n)on]: ")
+            elif mouv=="18" or mouv=="XVIII" or mouv=="xviii"or mouv=="[XVIII]" or mouv=="[xviii]":
+                print ("[XVIII]")
+                print ("LUMIERRES\n\nLes Lumières est un mouvement européen dont l'objectif est de lutter contre l'obscurantisme,.\nLes lumières sont celles de la raison devant repousser l'ignorance et le fanatisme. Selon Kant, philosophe allemand, l'homme des Lumières est celui qui a le courage de réfléchir par lui-même afin de se libérer des préjugés.\n(Sapere aude)\nLes philosophes des Lumières réfléchissent sur le bonheur de l'homme : pour être heureux, l'homme doit être libre d'exercer son esprit critique.\nMais pour nourrir cet esprit critique, l'homme doit avoir accès à la connaissance.\nC'est pourquoi les penseurs des Lumières se lancent dans l'élaboration d'ouvrages collectifs comme (italic)L'Encyclopédie(italic).\nLes idéaux des Lumières dont la liberté, l'égalité et la fraternité.")
+                cont=input("Voulez-vous trouver un nouveau mouvement? [(o)ui/(n)on]: ")
+            elif mouv=="19_1" or mouv=="XIX_1" or mouv=="xix_1" or mouv=="[XIX_1]" or mouv=="[xix_1]":
+                print ("[XIX_1]")
+                print ("ROMANTISME\n\nCe mouveent s'oppose au classicisme : il exalte l'imagination et fait du «moi» une valeur absolue.\nL'esprit se reconnaît à trravers la nostalgiedu passé (néé du dégout de la réalité contemporaine), la mal du siècle (né de l'écart entre la réalité et l'idéal que porte l'artiste romantique), le goût pour l'introspection (l'art doit exprimer la nature elle-même devient un reflet de ses états d'âmes) et la quête d'un idéal.\n\nLe poète romantique est aussi un artiste engagé qui se présente comme un guide pour le peuple.\nIl se fait juge des évènement de son temps et dénonce les injustices ou les abus de pouvoir.\n\nLe drame romantique:\nHugo définit ce nouveau type de théâtre comm refusant la distinction entre les genres comiques et tragiques, refusant les règles des trois unités et la vraisemblance.\nLe théâtre doit refléter la complexité de la vie")
+                cont=input("Voulez-vous trouver un nouveau mouvement? [(o)ui/(n)on]: ")
+            elif mouv=="19_2" or mouv=="XIX_2" or mouv=="xix_2" or mouv=="[XIX_2]" or mouv=="[xix_2]":
+                print ("[XIX_2]")
+                print ("PARNASSE\n\nCe mouvement s'inscrit contre le romantisme.\n\n\nIl refuse le lyrisme et les épanchements du «Moi» et cultive ainsi une poésie impersonnelle.\n\n\nIl refuse de soumettrre la poésie à une cause politique ou sociale: le seul but de l'art doit être le Beau.\n(C'est «l'art pour l'art» revendiqué par Gautier: ce qui est vraiment beau ne sert à rien.)\nIl ne s'intéresse donc pas à des sujets d'actualité mais à la myhtologie ou les civilisation disparues par exemple.\n\n\nLes Parnassiens accordent une importance capitale au travail sur la forme de leur texte: images, sonorités, choix des mots, goût du mot rare etc. Le poète parnassien est un sculpteur.\nIls influencent de nombreux poètes comme Baudelaire et Verlaine.")
+                cont=input("Voulez-vous trouver un nouveau mouvement? [(o)ui/(n)on]: ")
+            elif mouv=="19_3" or mouv=="XIX_3" or mouv=="xix_3" or mouv=="[XIX_3]" or mouv=="[xix_3]":
+                print ("[XIX_3]")
+                print ("SYMOLISME\n\nBaudelaire est le précurseur du symbolisme.\nLe symbolisme veut rompre avec les certitudes du naturalisme : le monde n'est pas uniquement ce qui se présente sous nos yeux. Il existe un monde invisible et mystérieux.\nPour déchiffrer les mystères du monde qui l'entoure, le poète symboliste a recours à ses cinq sens. il établit des correspondances, appelées aussi «synesthésies».\nHéritier de Baudelair, Rimbaud affirme que le poète doit «se faire«voyant» »: il doit «découvrir l'inconnu» et rapporter aux autres hommes ses visions.\nMais pour partager ses visions, il lui faut inventer un language nouveau.\nCe language nouveau (très inspiré par le travail formel des Parnassiens) accorde une grande importance à la musique à la musique.\nEn effet, la musique permet de suggérer ce que les mots ne peuvent nommer.\nCe travail sur la langue fait du poète symboliste un «alchimiste du verbe» selon Rimbaud.")
+                print ("19_3")
+                cont=input("Voulez-vous trouver un nouveau mouvement? [(o)ui/(n)on]: ")
+            elif mouv=="19_4" or mouv=="XIX_4" or mouv=="xix_4" or mouv=="[XIX_4]" or mouv=="[xix_4]":
+                print ("[XIX_4]")
+                print ("REALISME ET NATURALISME\n\nLe réalisme est un mouvement littéraire qui cherche à peindre la réalité telle qu'elle est, sans l'embellir.\nLes auteurs réalistes comme Balzac ont voulu être les historiens de leur époque, mais aussi des scientifiques. Ils souhaitent en effet montrer le fonctionnement de la société. A la manière des biologistes, ils font l'inventaire des «espèces sociales».\nLe personnage réaliste est un type qui incarne ainsi un groupe social ou untrait de caractère humain.\n\n\nLe naturalisme, que définit Zola, s'inscrit dans le sillage du réalisme.\nIl propose un nouveau type de roman, le «roman expérimental» dont le but est la connaissance de l'homme.\nZola se distingue de Balzac en affirmant vouloir étudier le «mécanisme intérieur» de l'être humain.\nIl veut prouver àtravers ses romans l'influence du milieu sur l'individu mais également le rôle de l'hérédité dans le comportement des êtres qui sont toujours déterminés.")
+                cont=input("Voulez-vous trouver un nouveau mouvement? [(o)ui/(n)on]: ")
+            elif mouv=="20_1" or mouv=="XX_1" or mouv=="xx_1" or mouv=="[XX_1]" or mouv=="[xx_1]":
+                print ("[XX_1]")
+                print ("SURREALISME\n\nCe mouvement n'aît après la première guerre mondiale.\nLe surréalisme est un mouvement artistique qui se situe dans le prolongement du symbolisme.\nParmi les précurseurs du surréalisme : Rimbaud, Jarry, Apolinaire.\nLa littérature surréaliste est liée à certains mouvements picturaux comme le cubisme.\nLe surréalisme défend l'idée que l'art peut changer la vie.\nBreton est le chef de file du surréalisme.\n\n\nLes surréalistes cherchent à libérer l'art du carcan de la raison et de la logique.\nPour cela, ils veule,t donner la parole à l'inconscient et accorder une place au hasard.\nIls utilisent  diverse techniques : écriture automatique, cadavres exquis, séance de sommeil hypnotique.\n\n\nLe surréalisme remet en cause les valeurs établies ce qui aboutit parfois à des engagements politiques : au carrefour de l'anarchisme et du marxisme, les surréalistes militent contre le militarisme, l'oppression coloniale, le nazisme, le totalistarisme soviétique.")
+                cont=input("Voulez-vous trouver un nouveau mouvement? [(o)ui/(n)on]: ")
+            elif mouv=="20_2" or mouv=="XX_2" or mouv=="xx_2" or mouv=="[XX_2]" or mouv=="[xx_2]":
+                print ("[XX_2]")
+                print ("THEATRE DE L'ABSURDE\n\nCe théâtre exprime l'angoisse existentielle  de l'homme après la seconde guerre mondiale.\nLe théâtre de l'absurde joue de Pirrationell farcesque pour montrer le tragique de la condition humaine : l'homme est seul dans un monde qui lui semble étranger: c'est «l'inquiétante étrangeté» (Freud) d'un monde jusq'à présent familier.\n\n\nLes personnages n'ont plus de consistance. Toutes leurs action semblent vaines : l vie n'a plus de sens, Le langage ne sert plus à sommuniquer.\n\n\nCe théâtre cultive la «distanciation» (Brecht) qui s'oppose à l'identification recherchée par un théâtre qui se veut réaliste : tout est fait pour que le spectateur sorte de sa position de pssivité et se mette à réfléchir sur le monde qui l'entoure.")
+                cont=input("Voulez-vous trouver un nouveau mouvement? [(o)ui/(n)on]: ")
+            elif mouv=="20_3" or mouv=="XX_3" or mouv=="xx_3" or mouv=="[XX_3]" or mouv=="[xx_3]":
+                print ("[XX_3]")
+                print ("EXIXTENTIALISME\n\nL'existentialisme français est un mouvement philosophique dont les deux représentants majeurs sont Artre et Camus (il existe toutefois plusieurs sujets de divergence entre eux).\nLa pensée existentialiste se retrouve dans une partie de la littérature de la seconde moitié du XXème siècle.\n\n\nLes existentialistes français rejettent «l'esprit de sérieux» ce que Sartre appelle la «mauvaise foi», c'est-à-dire le fait de se conformer à la fonciton arbitraire que nous impose la société.\nL'esprit de sérieus est la négation de la liberté de l'homme.\nCe rejet de l'esprit de sérieux est le thème de l'Etranger d'Albert Camus : Meursault refuse de se conformer à ce qu'on attend de lui, de jouer le jeu imposé par la société.\n\n\nLes existentialistes français mettent également l'accent sur l'absurdité de l'existence, le sentiment d'étrangeté que l'homme éprouve face à un monde qu'il ne comprend pas, dans lequel il ne trouve pas sa place (Camus parle d'un «divorse» entre l'homme et le monde).\n\n\nLes philosophes existentialistes définissent l'homme par son action : l'homme est ce qu'il fait, il est ainsi responsable de ce qui se passe dans la société.")
+                cont=input("Voulez-vous trouver un nouveau mouvement? [(o)ui/(n)on]: ")
+            elif mouv=="20_4" or mouv=="XX_4" or mouv=="xx_4" or mouv=="[XX_4]" or mouv=="[xx_4]":
+                print ("[XX_4]")
+                print ("NOUVEAU ROMAN\n\nCe mouvement rejette l'image rassurante du monde que véhicule le roman réaliste du XIXème siècle.\nLe monde n'est plus un univers cohérent.\nL'homme n'est plus un être que l'on peut comprendre.\nLe Nouveau Roman renvoie l'image d'un monde complexe et fragmenté.\n\n\nLes conséquences sur l'écriture romanesque:\n\nDéconstruction de la psychologie des personnages (les êtres deviennent anonymes et les objets prennent d'avantage de place).\nRefus de l'ordre chronologique des événements  (ce n'est plus l'histoire en elle-même qui importe mais l'écriture de l'histoire, avec ses oublis, ses répétitions, ses variations, etc.)\nLa pensée des personnages se manifest à traver des flux de conscience (jeux de mémoire, déstruction ou reconstruction du souvenir etc.)\n")
+                cont=input("Voulez-vous trouver un nouveau mouvement? [(o)ui/(n)on]: ")
+            elif mouv=="options" or mouv=="OPTIONS" or mouv=="Options" or  mouv=="option" or mouv=="OPTION" or mouv=="Option" :                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         
+                print ("Voici les comandes possibles:\n\n\nCommandes pour accéder directement au mouvement\n")
+                for lettre in liioption:
+                    print (lettre)
+                    sleep(0.05)
+                sleep(2)
+                print ("Pour accéder en passant par le siècle entrez le en chiffres romains:\nVoici les possibilité:")
+                for lettre in liioption_2:
+                    print (lettre)
+                    sleep(0.05)
+                sleep(2)
+                print ("PS:\nSi vous n'arrivez pas à vous repérez avec les chiffres romains, tapez ces derniers en chifres arabe (exemple: 16 pour XVI, 17_2 pour XVII_2).\n*===========================================================================*\n*Le plus petit siècle est le 16ème (XVI) et le plus grand est le 20ème (XX).*\n*===========================================================================*")
+                sleep(5)
+                while time<50:
+                    print ("\n")
+                    sleep(0.05)
+                    time+=1
+                cont=input("Voulez-vous trouver un nouveau mouvement? [(o)ui/(n)on]: ")
+            else:
+                print ("Êtes-vous sûre d'avoir entré un des nombres de l'exemple option?")
+                cont=input("Voulez-vous trouver un nouveau mouvement? [(o)ui/(n)on]: ")
+    elif main=="TLS" or main=="tls":
+        print ("TLS")
+        cont="o"
+        while cont=="o" or cont=="O":
+            mouv=input ("\nPour avoir accès à la liste de commande prévues tapez (options)\nQuel mouvement voulez-vous trouver? (veuillez entrer le nom du mouvement): ")
+            print ("Mouvement sélectionné: {}".format(mouv))
+            if mouv=="all":
+                print("""
+                [16/XVI]     --> "HUMANISME\n\nCertaines découvertes révolutionnent la vision du monde et de l'homme de l'époque: découverte de l'imprimerie, découverte d'œuvress antiques inédites, exploration de nouveau continents, découverte en astronomie.\nSous influence des auteurs de l'Antiquité, les humains rêvent ainsi d'une humanité pacifiée, cultivée et libre.\nLe développement de l'esprit est au centre de la réflexion humaniste qui valorise l'éducation et l'accès direct à la connaissance"
+                [17_1/XVII_1]--> "Le BAROQUE\n\nLa sensibilité baroque est fondée sur l'instabilité, l'inquiétude et le doute, qui trouvent leur origine dans la succession de guerre de religion qui agitent le pays.\nLe baroque aime jouer avec l'illusion, les méthamorphoses, le travestissement, les mises en abyme. Le théâtre baroque mélange les genres.\nL sensibilité baroque perçoit le monde comme une scène de théâtre où tout n'est qu'illusion (theatrum mundi)"
+                [17_2/XVII_2]--> "CLASSICISME\n\nLes Classiques défendent un double idéal, fondé sur la raison: Un idéal esthétique qui repose sur des règles édictées par les Anciens (et notament pour le théâtre): clarté, vraisemblance, bienséance; Un idéal humain qui s'incarne dans «l'honnête homme», un être modeste et cultivé capable de maîtriser ses passions.\nLes classiques sont des moralistes : ils analysent la nature humaine dont ils critiquent les défauts, pour tenter de corriger les hommes.\nLe but des classiques : plaire et instruire (placere et docere)."
+                [18/XVIII]   --> "LUMIERRES\n\nLes Lumières est un mouvement européen dont l'objectif est de lutter contre l'obscurantisme,.\nLes lumières sont celles de la raison devant repousser l'ignorance et le fanatisme. Selon Kant, philosophe allemand, l'homme des Lumières est celui qui a le courage de réfléchir par lui-même afin de se libérer des préjugés.\n(Sapere aude)\nLes philosophes des Lumières réfléchissent sur le bonheur de l'homme : pour être heureux, l'homme doit être libre d'exercer son esprit critique.\nMais pour nourrir cet esprit critique, l'homme doit avoir accès à la connaissance.\nC'est pourquoi les penseurs des Lumières se lancent dans l'élaboration d'ouvrages collectifs comme (italic)L'Encyclopédie(italic).\nLes idéaux des Lumières dont la liberté, l'égalité et la fraternité."
+                [19_1/XIX_1] --> "ROMANTISME\n\nCe mouveent s'oppose au classicisme : il exalte l'imagination et fait du «moi» une valeur absolue.\nL'esprit se reconnaît à trravers la nostalgiedu passé (néé du dégout de la réalité contemporaine), la mal du siècle (né de l'écart entre la réalité et l'idéal que porte l'artiste romantique), le goût pour l'introspection (l'art doit exprimer la nature elle-même devient un reflet de ses états d'âmes) et la quête d'un idéal.\n\nLe poète romantique est aussi un artiste engagé qui se présente comme un guide pour le peuple.\nIl se fait juge des évènement de son temps et dénonce les injustices ou les abus de pouvoir.\n\nLe drame romantique:\nHugo définit ce nouveau type de théâtre comm refusant la distinction entre les genres comiques et tragiques, refusant les règles des trois unités et la vraisemblance.\nLe théâtre doit refléter la complexité de la vie"
+                [19_2/XIX_2] --> "PARNASSE\n\nCe mouvement s'inscrit contre le romantisme.\n\n\nIl refuse le lyrisme et les épanchements du «Moi» et cultive ainsi une poésie impersonnelle.\n\n\nIl refuse de soumettrre la poésie à une cause politique ou sociale: le seul but de l'art doit être le Beau.\n(C'est «l'art pour l'art» revendiqué par Gautier: ce qui est vraiment beau ne sert à rien.)\nIl ne s'intéresse donc pas à des sujets d'actualité mais à la myhtologie ou les civilisation disparues par exemple.\n\n\nLes Parnassiens accordent une importance capitale au travail sur la forme de leur texte: images, sonorités, choix des mots, goût du mot rare etc. Le poète parnassien est un sculpteur.\nIls influencent de nombreux poètes comme Baudelaire et Verlaine."
+                [19_3/XIX_3] --> "SYMOLISME\n\nBaudelaire est le précurseur du symbolisme.\nLe symbolisme veut rompre avec les certitudes du naturalisme : le monde n'est pas uniquement ce qui se présente sous nos yeux. Il existe un monde invisible et mystérieux.\nPour déchiffrer les mystères du monde qui l'entoure, le poète symboliste a recours à ses cinq sens. il établit des correspondances, appelées aussi «synesthésies».\nHéritier de Baudelair, Rimbaud affirme que le poète doit «se faire«voyant» »: il doit «découvrir l'inconnu» et rapporter aux autres hommes ses visions.\nMais pour partager ses visions, il lui faut inventer un language nouveau.\nCe language nouveau (très inspiré par le travail formel des Parnassiens) accorde une grande importance à la musique à la musique.\nEn effet, la musique permet de suggérer ce que les mots ne peuvent nommer.\nCe travail sur la langue fait du poète symboliste un «alchimiste du verbe» selon Rimbaud."
+                [19_4/XIX_4] --> "REALISME ET NATURALISME\n\nLe réalisme est un mouvement littéraire qui cherche à peindre la réalité telle qu'elle est, sans l'embellir.\nLes auteurs réalistes comme Balzac ont voulu être les historiens de leur époque, mais aussi des scientifiques. Ils souhaitent en effet montrer le fonctionnement de la société. A la manière des biologistes, ils font l'inventaire des «espèces sociales».\nLe personnage réaliste est un type qui incarne ainsi un groupe social ou untrait de caractère humain.\n\n\nLe naturalisme, que définit Zola, s'inscrit dans le sillage du réalisme.\nIl propose un nouveau type de roman, le «roman expérimental» dont le but est la connaissance de l'homme.\nZola se distingue de Balzac en affirmant vouloir étudier le «mécanisme intérieur» de l'être humain.\nIl veut prouver àtravers ses romans l'influence du milieu sur l'individu mais également le rôle de l'hérédité dans le comportement des êtres qui sont toujours déterminés."
+                [20_1/XX_1]  --> "SURREALISME\n\nCe mouvement n'aît après la première guerre mondiale.\nLe surréalisme est un mouvement artistique qui se situe dans le prolongement du symbolisme.\nParmi les précurseurs du surréalisme : Rimbaud, Jarry, Apolinaire.\nLa littérature surréaliste est liée à certains mouvements picturaux comme le cubisme.\nLe surréalisme défend l'idée que l'art peut changer la vie.\nBreton est le chef de file du surréalisme.\n\n\nLes surréalistes cherchent à libérer l'art du carcan de la raison et de la logique.\nPour cela, ils veule,t donner la parole à l'inconscient et accorder une place au hasard.\nIls utilisent  diverse techniques : écriture automatique, cadavres exquis, séance de sommeil hypnotique.\n\n\nLe surréalisme remet en cause les valeurs établies ce qui aboutit parfois à des engagements politiques : au carrefour de l'anarchisme et du marxisme, les surréalistes militent contre le militarisme, l'oppression coloniale, le nazisme, le totalistarisme soviétique."
+                [20_2/XX_2]  --> "THEATRE DE L'ABSURDE\n\nCe théâtre exprime l'angoisse existentielle  de l'homme après la seconde guerre mondiale.\nLe théâtre de l'absurde joue de Pirrationell farcesque pour montrer le tragique de la condition humaine : l'homme est seul dans un monde qui lui semble étranger: c'est «l'inquiétante étrangeté» (Freud) d'un monde jusq'à présent familier.\n\n\nLes personnages n'ont plus de consistance. Toutes leurs action semblent vaines : l vie n'a plus de sens, Le langage ne sert plus à sommuniquer.\n\n\nCe théâtre cultive la «distanciation» (Brecht) qui s'oppose à l'identification recherchée par un théâtre qui se veut réaliste : tout est fait pour que le spectateur sorte de sa position de pssivité et se mette à réfléchir sur le monde qui l'entoure."
+                [20_3/XX_3]  --> "EXISTENTIALISME\n\nL'existentialisme français est un mouvement philosophique dont les deux représentants majeurs sont Artre et Camus (il existe toutefois plusieurs sujets de divergence entre eux).\nLa pensée existentialiste se retrouve dans une partie de la littérature de la seconde moitié du XXème siècle.\n\n\nLes existentialistes français rejettent «l'esprit de sérieux» ce que Sartre appelle la «mauvaise foi», c'est-à-dire le fait de se conformer à la fonciton arbitraire que nous impose la société.\nL'esprit de sérieus est la négation de la liberté de l'homme.\nCe rejet de l'esprit de sérieux est le thème de l'Etranger d'Albert Camus : Meursault refuse de se conformer à ce qu'on attend de lui, de jouer le jeu imposé par la société.\n\n\nLes existentialistes français mettent également l'accent sur l'absurdité de l'existence, le sentiment d'étrangeté que l'homme éprouve face à un monde qu'il ne comprend pas, dans lequel il ne trouve pas sa place (Camus parle d'un «divorse» entre l'homme et le monde).\n\n\nLes philosophes existentialistes définissent l'homme par son action : l'homme est ce qu'il fait, il est ainsi responsable de ce qui se passe dans la société."
+                [20_4/XX_4]  --> "NOUVEAU ROMAN\n\nCe mouvement rejette l'image rassurante du monde que véhicule le roman réaliste du XIXème siècle.\nLe monde n'est plus un univers cohérent.\nL'homme n'est plus un être que l'on peut comprendre.\nLe Nouveau Roman renvoie l'image d'un monde complexe et fragmenté.\n\n\nLes conséquences sur l'écriture romanesque:\n\nDéconstruction de la psychologie des personnages (les êtres deviennent anonymes et les objets prennent d'avantage de place).\nRefus de l'ordre chronologique des événements  (ce n'est plus l'histoire en elle-même qui importe mais l'écriture de l'histoire, avec ses oublis, ses répétitions, ses variations, etc.)\nLa pensée des personnages se manifest à traver des flux de conscience (jeux de mémoire, déstruction ou reconstruction du souvenir etc.)\n""")
+                cont=input("Voulez-vous trouver un nouveau mouvement? [(o)ui/(n)on]: ")
+            elif mouv=="16" or mouv=="XVI" or mouv=="xvi"or mouv=="[XVI]" or mouv=="[xvi]" or mouv=="[HUMANISME]" or mouv=="[humanisme]" or mouv=="HUMANISME" or mouv=="humanisme":
+                print ("[HUMANISME]")
+                print ("16ème, XVI, 1500")
+                cont=input("Voulez-vous trouver un nouveau mouvement? [(o)ui/(n)on]: ")
+            elif mouv=="17_1" or mouv=="XVII_1" or mouv=="xvii_1"or mouv=="[XVII_1]" or mouv=="[xvii_1]" or mouv=="[LE BAROQUE]" or mouv=="[le baroque]" or mouv=="LE BAROQUE" or mouv=="le baroque" or mouv=="baroque":
+                print ("[Le_BAROQUE]")
+                print ("17ème, XVII, 1600")
+                cont=input("Voulez-vous trouver un nouveau mouvement? [(o)ui/(n)on]: ")
+            elif mouv=="17_2" or mouv=="XVII_2" or mouv=="xvii_2"or mouv=="[XVII_2]" or mouv=="[xvii_2]" or mouv=="[CLASSICISME]" or mouv=="[classicisme]" or mouv=="CLASSICISME" or mouv=="classicisme":
+                print ("[CLASSICISME]")
+                print ("17ème, XVII, 1600")
+                cont=input("Voulez-vous trouver un nouveau mouvement? [(o)ui/(n)on]: ")
+            elif mouv=="18" or mouv=="XVIII" or mouv=="xviii"or mouv=="[XVIII]" or mouv=="[xviii]" or mouv=="[LUMIERRES]" or mouv=="[lumierres]" or mouv=="LUMIERRES" or mouv=="lumierre" or mouv=="lumièrre" or mouv=="[lumierre]" or mouv=="lumièrres" or mouv=="[lumierres]" or mouv=="[LUMIERES]" or mouv=="[lumieres]" or mouv=="LUMIERES" or mouv=="lumiere" or mouv=="lumière" or mouv=="[lumiere]" or mouv=="lumières" or mouv=="[lumieres]":
+                print ("[LUMIERRES]")
+                print ("18ème, XVIII, 1700")
+                cont=input("Voulez-vous trouver un nouveau mouvement? [(o)ui/(n)on]: ")
+            elif mouv=="19_1" or mouv=="XIX_1" or mouv=="xix_1" or mouv=="[XIX_1]" or mouv=="[xix_1]" or mouv=="[ROMANTISME]" or mouv=="[romantisme]" or mouv=="romantisme" or mouv=="ROMANTISME":
+                print ("[ROMANTISME]")
+                print ("19ème, XIX, 1800")
+                cont=input("Voulez-vous trouver un nouveau mouvement? [(o)ui/(n)on]: ")
+            elif mouv=="19_2" or mouv=="XIX_2" or mouv=="xix_2" or mouv=="[XIX_2]" or mouv=="[xix_2]" or mouv=="[PARNASSE]" or mouv=="[parnasse]" or mouv=="PARNASSE" or mouv=="parnasse":
+                print ("[PARNASSE]")
+                print ("19ème, XIX, 1800")
+                cont=input("Voulez-vous trouver un nouveau mouvement? [(o)ui/(n)on]: ")
+            elif mouv=="19_3" or mouv=="XIX_3" or mouv=="xix_3" or mouv=="[XIX_3]" or mouv=="[xix_3]" or mouv=="[SYMBOLISME]" or mouv=="[symbolisme]" or mouv=="SYMBOLISME" or mouv=="symbolisme":
+                print ("[SYMBOLISME]")
+                print ("19ème, XIX, 1800")
+                cont=input("Voulez-vous trouver un nouveau mouvement? [(o)ui/(n)on]: ")
+            elif mouv=="19_4" or mouv=="XIX_4" or mouv=="xix_4" or mouv=="[XIX_4]" or mouv=="[xix_4]" or mouv=="[REALISME]" or mouv=="[realisme]" or mouv=="[réalisme]" or mouv=="REALISME" or mouv=="realisme" or mouv=="réalisme":
+                print ("[REALISME]")
+                print ("19ème, XIX, 1800")
+                cont=input("Voulez-vous trouver un nouveau mouvement? [(o)ui/(n)on]: ")
+            elif mouv=="20_1" or mouv=="XX_1" or mouv=="xx_1" or mouv=="[XX_1]" or mouv=="[xx_1]" or mouv=="[SURREALISME]" or mouv=="[surrealisme]" or mouv=="SURREALISME" or mouv=="surrealisme" or mouv=="surréalisme" or mouv=="[surréalisme]":
+                print ("[SURREALISME]")
+                print ("20ème, XX, 1900")
+                cont=input("Voulez-vous trouver un nouveau mouvement? [(o)ui/(n)on]: ")
+            elif mouv=="20_2" or mouv=="XX_2" or mouv=="xx_2" or mouv=="[XX_2]" or mouv=="[xx_2]" or mouv=="[THEATRE_DE_L'ABSURDE]" or mouv=="[théâtre de l'absurde]" or mouv=="[theatre de l'absurde]"or mouv=="THEATRE_DE_L'ABSURDE" or mouv=="théatre de l'absurde" or mouv=="theatre de l'absurde":
+                print ("[THEATRE_DE_L'ABSURDE]")
+                print ("20ème, XX, 1900")
+                cont=input("Voulez-vous trouver un nouveau mouvement? [(o)ui/(n)on]: ")
+            elif mouv=="20_3" or mouv=="XX_3" or mouv=="xx_3" or mouv=="[EXISTENTIALISME]" or mouv=="[existentialisme]" or mouv=="[éxistentialisme]" or mouv=="EXISTENTIALISME" or mouv=="existentialisme" or mouv=="éxistentialisme":
+                print ("[EXISTENTIALISME]")
+                print ("20ème, XX, 1900")
+                cont=input("Voulez-vous trouver un nouveau mouvement? [(o)ui/(n)on]: ")
+            elif mouv=="20_4" or mouv=="XX_4" or mouv=="xx_4" or mouv=="[XX_4]" or mouv=="[xx_4]" or mouv=="[NOUVEAU ROMAN]" or mouv=="[nouveau roman]" or mouv=="NOUVEAU ROMAN" or mouv=="nouveau roman":
+                print ("[NOUVEAU_ROMAN]")
+                print ("20ème, XX, 1900")
+                cont=input("Voulez-vous trouver un nouveau mouvement? [(o)ui/(n)on]: ")
+            elif mouv=="options" or mouv=="OPTIONS" or mouv=="Options" or  mouv=="option" or mouv=="OPTION" or mouv=="Option" :                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         
+                print ("Voici les comandes possibles:\n\n\nCommandes pour accéder directement au mouvement")
+                for lettre in liioption_2_1:
+                    print (lettre)
+                    sleep(0.05)
+                sleep(2)
+                print ("Pour accéder en passant par le siècle entrez le en chiffres romains:\nVoici les possibilité:")
+                sleep(1)
+                for lettre in liioption_2:
+                    print (lettre)
+                    sleep(0.05)
+                sleep(2)
+                print ("PS:\nSi vous n'arrivez pas à vous repérez avec les chiffres romains, tapez ces derniers en chiffres arabe (exemple: 16 pour XVI, 17_2 pour XVII_2).\n\n\n\n")
+                sleep(3)
+                for lettre in liioptionalert:
+                    print (lettre)
+                    sleep(0.05)
+                sleep(2)
+                print ("Voici la liste de mot clées utilisable pour les mouvements:\nIl suffit d'en entrer une dans la ligne de question pour accéder directement au mouvement en question:\n !!!! Attention, ci-dessous vont s'afficher {} éléments !!!!".format(len(liimouvmouv)))
+                for lettre in liimouvmouv:
+                    print (lettre)
+                    sleep (0.5)
+                sleep(9)
+                while time<50:
+                    print ("\n")
+                    sleep(0.05)
+                    time+=1
+                cont=input("Voulez-vous trouver un nouveau mouvement? [(o)ui/(n)on]: ")
+
+            else:
+                print ("""Êtes-vous sûre d'avoir entré un des nombres de l'exemple "option" ?""")
+                cont=input("Voulez-vous trouver un nouveau mouvement? [(o)ui/(n)on]: ")
+    elif main=="/?" or main=="?":
+        print ("/?")
+        print ("Bienvene dans l'aide:")
+        sleep(2)
+        Help=input("Sur quel sujet avez d'être aider? [(ssp) se servir du programme, (cs) Convertion de siècles en années; (ca) Convertion d'années en siècles; (tm) trouver les mouvements; (tdm)trover la date des mouvements]:")
+        if Help=="ssp" or Help=="SSP" or Help=="Ssp"or Help=="SSp" or Help=="sSp" or Help=="ssP:
+            print ("hi")
+        elif Help=="cs" or Help=="CS":
+            print ("by"
+        elif Help=="ca" or Help=="CA":
+            print ("go")
+        elif Help=="tm" or Help=="TM":
+            print ("boo")
+        elif Help=="tdm" or Help=="TDM":
+    elif main=="Q" or main=="q":
+        print (" Au revoir.\n {}{}".format(w, w_e))
+        sleep(2)
+        break
+    else:
+        print (" Le repère '{}' que vous avez entré n'est pas reconnu.\n Merci de retenter une nouveau repère.".format(main))
+        sleep(2)
+
+
+l.desgree@gmail.com

@@ -1,0 +1,51 @@
+import turtle
+from time import sleep
+a=5
+t = turtle.Turtle()
+# for c in ['red', 'green', 'yellow', 'blue', 'orange', 'black', 'purple', 'pink', 'orange', 'blue', 'yellow', 'lightgreen', 'red', 'green', 'yellow', 'blue', 'orange', 'black', 'purple', 'pink', 'orange', 'blue', 'yellow', 'lightgreen', 'red', 'green', 'yellow', 'blue', 'orange', 'black', 'purple', 'pink', 'orange', 'blue', 'yellow', 'lightgreen', 'red', 'green', 'yellow', 'blue', 'orange', 'black', 'purple', 'pink', 'orange', 'blue', 'yellow', 'lightgreen', 'red', 'green', 'yellow', 'blue', 'orange', 'black', 'purple', 'pink', 'orange', 'blue', 'yellow', 'lightgreen', 'red', 'green', 'yellow', 'blue', 'orange', 'black', 'purple', 'pink', 'orange', 'blue', 'yellow', 'lightgreen', 'red', 'green', 'yellow', 'blue', 'orange', 'black', 'purple', 'pink', 'orange', 'blue', 'yellow', 'lightgreen', 'red', 'green', 'yellow', 'blue', 'orange', 'black', 'purple', 'pink', 'orange', 'blue', 'yellow', 'lightgreen','red', 'green', 'yellow', 'blue', 'orange', 'black', 'purple', 'pink', 'orange', 'blue', 'yellow', 'lightgreen', 'red', 'green', 'yellow', 'blue', 'orange', 'black', 'purple', 'pink', 'orange', 'blue', 'yellow', 'lightgreen', 'red', 'green', 'yellow', 'blue', 'orange', 'black', 'purple', 'pink', 'orange', 'blue', 'yellow', 'lightgreen', 'red', 'green', 'yellow', 'blue', 'orange', 'black', 'purple', 'pink', 'orange', 'blue', 'yellow', 'lightgreen', 'red', 'green', 'yellow', 'blue', 'orange', 'black', 'purple', 'pink', 'orange', 'blue', 'yellow', 'lightgreen', 'red', 'green', 'yellow', 'blue', 'orange', 'black', 'purple', 'pink', 'orange', 'blue', 'yellow', 'lightgreen', 'red', 'green', 'yellow', 'blue', 'orange', 'black', 'purple', 'pink', 'orange', 'blue', 'yellow', 'lightgreen', 'red', 'green', 'yellow', 'blue', 'orange', 'black', 'purple', 'pink', 'orange', 'blue', 'yellow', 'lightgreen']:
+#         t.color(c)
+#         t.forward(75)
+#         t.left(50)
+# t.penup()
+# t.forward(85)
+# t.pendown()
+for d in ['red', 'green', 'yellow', 'blue', 'orange', 'black', 'purple', 'pink']:
+	t.color(d)
+	t.forward(85)
+	t.right(60)
+t.penup()
+t.left(150)
+t.forward(85)
+t.pendown()
+for d in ['red', 'green', 'yellow', 'blue', 'orange', 'black', 'purple', 'pink']:
+	t.color(d)
+	t.forward(85)
+	t.right(90)
+t.penup()
+t.reset()
+t.left(90)
+t.forward(85)
+t.width(a)
+t.pendown()
+for b in ['red', 'green', 'yellow', 'blue', 'orange', 'black', 'purple', 'pink']:
+	t.color(b)
+	t.forward(85)
+	t.right(90)
+	t.forward(85)
+	t.left(5)
+	t.forward(85)
+	t.width(a)
+	a+=5
+t.penup()
+t.left(90)
+t.forward(85)
+t.width(None)
+t.pendown()
+t.reset()
+t.forward(85)
+t.goto(0, -5)
+for v in ['red', 'green', 'yellow', 'blue', 'orange', 'black', 'yellow', 'purple', 'pink', 'yellow', 'red', 'green', 'yellow', 'blue', 'orange', 'black', 'purple', 'pink', 'orange', 'blue', 'yellow', 'lightgreen', 'red', 'green', 'yellow', 'blue', 'orange', 'black', 'purple', 'pink', 'orange', 'blue', 'yellow', 'lightgreen', 'red', 'green', 'yellow', 'blue', 'orange', 'black', 'purple', 'pink', 'orange', 'blue', 'yellow', 'lightgreen', 'red', 'green', 'yellow', 'blue', 'orange', 'black', 'purple', 'pink', 'orange', 'blue', 'yellow', 'lightgreen', 'red', 'green', 'yellow', 'blue', 'orange', 'black', 'purple', 'pink', 'orange', 'blue', 'yellow', 'lightgreen', 'red', 'green', 'yellow', 'blue', 'orange', 'black', 'purple', 'pink', 'orange', 'blue', 'yellow', 'lightgreen', 'red', 'green', 'yellow', 'blue', 'orange', 'black', 'purple', 'pink', 'orange', 'blue', 'yellow', 'lightgreen', 'red', 'green', 'yellow', 'blue', 'orange', 'black', 'purple', 'pink', 'orange', 'blue', 'yellow', 'lightgreen','red', 'green', 'yellow', 'blue', 'orange', 'black', 'purple', 'pink', 'orange', 'blue', 'yellow', 'lightgreen', 'red', 'green', 'yellow', 'blue', 'orange', 'black', 'purple', 'pink', 'orange', 'blue', 'yellow', 'lightgreen', 'red', 'green', 'yellow', 'blue', 'orange', 'black', 'purple', 'pink', 'orange', 'blue', 'yellow', 'lightgreen', 'red', 'green', 'yellow', 'blue', 'orange', 'black', 'purple', 'pink', 'orange', 'blue', 'yellow', 'lightgreen', 'red', 'green', 'yellow', 'blue', 'orange', 'black', 'purple', 'pink', 'orange', 'blue', 'yellow', 'lightgreen', 'red', 'green', 'yellow', 'blue', 'orange', 'black', 'purple', 'pink', 'orange', 'blue', 'yellow', 'lightgreen', 'red', 'green', 'yellow', 'blue', 'orange', 'black', 'purple', 'pink', 'orange', 'blue', 'yellow', 'lightgreen', 'red', 'green', 'yellow', 'blue', 'orange', 'black', 'purple', 'pink', 'orange', 'blue', 'yellow', 'lightgreen']:
+	t.color(v)
+	t.forward(85)
+	t.circle(radius=4, extent=30, steps=None)
+sleep (5)
